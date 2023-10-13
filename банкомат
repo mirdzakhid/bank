@@ -28,3 +28,12 @@ def number_to_words(num):
             result += words[n] + " "
 
         return result.strip()
+
+    result = ""
+
+    if num // 1000 != 0:
+        result += convert_three_digits(num // 1000) + " тысяч "
+
+    result += convert_three_digits(num % 1000) + " рублей"
+
+    return result.strip()
