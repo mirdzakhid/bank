@@ -37,3 +37,7 @@ def number_to_words(num):
     result += convert_three_digits(num % 1000) + " рублей"
 
     return result.strip()
+
+number = int(input("Введите сумму выдачи: "))
+result = number_to_words(number)
+print(result
