@@ -11,3 +11,20 @@ def number_to_words(num):
 
     if num == 0:
         return "ноль рублей"
+
+    def convert_three_digits(n):
+        result = ""
+
+        if n // 100 != 0:
+            result += hundreds[n // 100] + " "
+
+        n %= 100
+
+        if n >= 20:
+            result += tens[n // 10] + " "
+            n %= 10
+
+        if n != 0:
+            result += words[n] + " "
+
+        return result.strip()
